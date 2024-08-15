@@ -14,6 +14,7 @@ public class Arreglos{
         
          for(int i=0;i<3;i++){
             System.out.println(numeros[i]);
+            System.out.println(numeros[i]);
         }
     }
 }
