@@ -1,9 +1,9 @@
 public class Persona{
     String nombre, apellido,direccion;
-    Rut rut;
+    String rut;
     int edad, telefono;
 
-    Persona(String nombre, String apellido, Rut rut, int edad, int telefono, String direccion){
+    Persona(String nombre, String apellido, String rut, int edad, int telefono, String direccion){
         this.nombre = nombre;
         this.apellido = apellido;
         this.rut = rut;
@@ -12,7 +12,16 @@ public class Persona{
         this.direccion = direccion;
     }
     public void modificarRut(String rut){
-        //this.rut = rut;
+
+        //boolean valido = Rut.validar(rut);
+
+        if(valido == true){
+            this.rut = rut;
+            System.out.println("La modificación ha sido exitosa");
+        }
+        else{
+            System.out.println("El rut ingresado es inválido, no se han hecho modificaciones");
+        }
 
     }
     public void modificarEdad(int edad){
@@ -27,8 +36,13 @@ public class Persona{
         this.apellido = apellido;
 
     }
-    public void verInfoPersona(){
-        return "Nombre: "+this.nombre+", Apellido: "+this.apellido+", Rut: "+this.rut+", Edad: "+this.edad+", Teléfono: "+this.telefono+", Dirección: "+this.direccion;
+    public String verInfoPersona(){
+        return "Nombre: "+this.nombre+"\n"+
+        "Apellido: "+this.apellido+"\n"+
+        "Rut: "+this.rut+"\n"+
+        "Edad: "+this.edad+"\n"+
+        "Teléfono: "+this.telefono+"\n"+
+        "Dirección: "+this.direccion;
     }
-
+    
 }
